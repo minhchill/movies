@@ -4,6 +4,7 @@ import { FaYoutube } from "react-icons/fa";
 import Image from "../Image";
 import { IMovie } from "@/types";
 import { useMediaQuery } from "usehooks-ts";
+import WatchedIcon from "@/features/watchedList/components/WatchedIcon";
 
 const MovieCard = ({
   movie,
@@ -33,6 +34,17 @@ const MovieCard = ({
           <div className="xs:text-[48px] text-[42px] text-[#ff0000] scale-[0.4] group-hover:scale-100 transition-all duration-300 ">
             <FaYoutube />
           </div>
+        </div>
+        
+        {/* Watched Icon - positioned at top right */}
+        <div className="absolute top-2 right-2 z-10">
+          <WatchedIcon 
+            id={id}
+            type={category as 'movie' | 'tv'}
+            title={(title || name) || ''}
+            posterPath={poster_path}
+            size="sm"
+          />
         </div>
       </Link>
 

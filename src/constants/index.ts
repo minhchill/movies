@@ -4,6 +4,7 @@ import { GoDeviceDesktop } from "react-icons/go";
 import { AiOutlineHome } from "react-icons/ai";
 import { TbMovie } from "react-icons/tb";
 import { MdOutlineLiveTv } from "react-icons/md";
+import { IoEye } from "react-icons/io5";
 
 import { ITheme, INavLink } from "../types";
 
@@ -22,6 +23,11 @@ export const navLinks: INavLink[] = [
     title: "tv series",
     path: "/tv",
     icon: MdOutlineLiveTv,
+  },
+  {
+    title: "watched",
+    path: "/watched",
+    icon: IoEye,
   },
 ];
 
