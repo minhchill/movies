@@ -38,7 +38,7 @@ const ImageUpload = ({
     });
   };
 
-  const resizeImage = (file: File, maxWidth = 800, maxHeight = 600, quality = 0.8): Promise<string> => {
+  const resizeImage = useCallback((file: File, maxWidth = 800, maxHeight = 600, quality = 0.8): Promise<string> => {
     return new Promise((resolve, reject) => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
@@ -86,7 +86,7 @@ const ImageUpload = ({
       img.onerror = reject;
       img.src = URL.createObjectURL(file);
     });
-  };
+  }, []);
 
   const onDrop = useCallback(async (acceptedFiles: File[], rejectedFiles: any[]) => {
     setError('');
@@ -131,7 +131,7 @@ const ImageUpload = ({
     } catch (error) {
       setError('Failed to process images. Please try again.');
     }
-  }, [images, onImagesChange, maxImages, maxFileSize]);
+  }, [images, onImagesChange, maxImages, maxFileSize, resizeImage]);
 
   const removeImage = (imageId: string) => {
     const updatedImages = images.filter(img => img.id !== imageId);
