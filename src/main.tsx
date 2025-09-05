@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -13,7 +13,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter basename="/movies">
+    <HashRouter basename="/movies">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <ThemeProvider>
@@ -25,6 +25,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           </ThemeProvider>
         </PersistGate>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
