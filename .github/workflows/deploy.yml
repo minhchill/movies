@@ -28,6 +28,9 @@ jobs:
       run: npm ci
       
     - name: Build
+      env:
+        VITE_API_KEY: 7d4164c559be7fe234b618a49a39409b
+        VITE_TMDB_API_BASE_URL: https://api.themoviedb.org/3/
       run: npm run build
       
     - name: Deploy to GitHub Pages
