@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "author": "Sudeep Mahato",
-  "homepage": "https://sudeepmahato16.github.io/movie-app",
+  "author": "Minh Chill",
+  "homepage": "https://minhchill.github.io/movies/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -39,7 +39,7 @@ const MovieCard = ({
         {/* Watched Icon - positioned at top right */}
         <div className="absolute top-2 right-2 z-10">
           <WatchedIcon 
-            id={id}
+            id={Number(id)}
             type={category as 'movie' | 'tv'}
             title={(title || name) || ''}
             posterPath={poster_path}
