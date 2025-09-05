@@ -162,3 +162,4 @@ Thank you for your contribution to Movie app project! We appreciate your efforts
 UI/UX design adapted from Tuat Tran Anh's tutorial.
 
 - Tutorial: [Responsive React Movies App With API | ReactJS Movies | ReactJS Tutorial](https://youtu.be/ntYXj9W1Ez8?si=ddwD3FZ6sot_NX9K)
+trigger deployment
